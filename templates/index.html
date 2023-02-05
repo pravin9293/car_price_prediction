@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+    <style>
+        body{
+            background-image: url(https://www.supercars.net/blog/wp-content/uploads/2022/09/Best-New-Sports-and-Performance-Cars-2022_Ford_Mustang_Shelby_GT500KR.jpg);
+            background-size: cover;
+            /* display: flex; */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> <b>Car Price Prediction</b></h1>
+    <div>
+        <form action="/carprice" method ="GET">
+            <div>
+                <label>Name</label>
+                <input type="text" name="name">
+            </div>
+            <br>
+            <div>
+                <label>Company</label>
+                <input type="text" name="company">
+            </div>
+            <br>
+            
+            <div>
+                <label>Year</label>
+                <input type="number" name="year">
+            </div>
+
+            <br>
+
+            <div>
+                <label>Kms driven</label>
+                <input type="text" name="kms_driven">
+            </div>
+
+            <br>
+    
+
+            <div>
+                <label>Fuel Type</label>
+                <!-- <input type="text" name="fuel_type"> -->
+                <select name="fuel_type">
+
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+
+                </select>
+                
+            </div>
+
+            <br>
+
+            <div>
+                <button type="submit">
+                    Submit 
+                </button>
+            </div>
+
+        </form>
+    </div>
+    <br>
+
+    <h3><strong>The estimated car price will be <b> {{ prediction }} /- Rs.</b> Only </strong></h3>
+    
+</body>
+</html>
